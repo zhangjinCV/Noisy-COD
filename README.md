@@ -1,4 +1,4 @@
-# [ECCV2024] Learning Camouflaged Object Detection from Noisy Pseudo Labels
+# [ECCV2024] Learning Camouflaged Object Detection from Noisy Pseudo Label
 
 This is the open-source repository for our paper **Learning Camouflaged Object Detection from Noisy Pseudo Label**, accepted at ECCV 2024!
 
