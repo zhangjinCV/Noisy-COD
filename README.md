@@ -1,26 +1,26 @@
-# [ECCV2024] Learning Camouflage Object Detection from Noisy Pseudo Label
+# [ECCV2024] Learning Camouflaged Object Detection from Noisy Pseudo Labels
 
-This is the open source repository for our paper **Learning Camouflaged Object Detection from Noisy Pseudo Label**, which is accepted by ECCV2024!!!. 
+This is the open-source repository for our paper **Learning Camouflaged Object Detection from Noisy Pseudo Label**, accepted at ECCV 2024!
 
-## **Framework Architecture**
+## Framework Architecture
 
 ![Framework Architecture](figure/model2.png)
 
 ![Proposed Models](figure/model.png)
 
-## **Performance**
+## Performance
 
 ![Performance](figure/performance.png)
 
 ![Performance](figure/show2.png)
 
-![Comparesion](figure/compare.png)
+![Comparison](figure/compare.png)
 
-## **Training Process**
+## Training Process
 
-### **Task Definition: Weakly Semi-Supervised Camouflaged Object Detection (WSSCOD)**
+### Task Definition: Weakly Semi-Supervised Camouflaged Object Detection (WSSCOD)
 
-We introduce a novel training protocol named **Weakly Semi-Supervised Camouflaged Object Detection (WSSCOD)**, which utilizes boxes as prompts to generate high-quality pseudo labels. WSSCOD primarily leverages box annotations, complemented by a minimal amount of pixel-level annotations, to generate high-accuracy pseudo labels.
+We introduce a novel training protocol named **Weakly Semi-Supervised Camouflaged Object Detection (WSSCOD)**, utilizing boxes as prompts to generate high-quality pseudo labels. WSSCOD leverages box annotations, complemented by a minimal amount of pixel-level annotations, to generate high-accuracy pseudo labels.
 
 1. **Dataset Division:**
    - $\mathcal{D}_m = \{\mathcal{X}_m, \mathcal{F}_m, \mathcal{B}_m\}_{m=1}^M$: Pixel-level annotations $\mathcal{F}_m$, box annotations $\mathcal{B}_m$, and training images $\mathcal{X}_m$.
@@ -39,12 +39,12 @@ We introduce a novel training protocol named **Weakly Semi-Supervised Camouflage
 5. **Training PNet:**
    - Train **PNet** using the dataset $\mathcal{D}_t$.
    - Evaluate performance with different $M$ and $N$ ratios:
-     - \textbf{PNet$_{F1}$}: $M=1\%$, $N=99\%$
-     - \textbf{PNet$_{F5}$}: $M=5\%$, $N=95\%
-     - \textbf{PNet$_{F10}$}: $M=10\%$, $N=90\%
-     - \textbf{PNet$_{F20}$}: $M=20\%, $N=80\%
+     - **PNet$_{F1}$**: $M=1\%$, $N=99\%$
+     - **PNet$_{F5}$**: $M=5\%$, $N=95\%$
+     - **PNet$_{F10}$**: $M=10\%$, $N=90\%$
+     - **PNet$_{F20}$**: $M=20\%$, $N=80\%$
 
-### **Details: ANet and  PNet Training**
+### Details: ANet and PNet Training
 
 | **Aspect**                    | **ANet** (Auxiliary Network)                     | **PNet** (Primary Network)                        |
 |-------------------------------|--------------------------------------------------|--------------------------------------------------|
@@ -58,66 +58,62 @@ We introduce a novel training protocol named **Weakly Semi-Supervised Camouflage
 | **Performance Evaluation**    | -                                                | Different settings: **PNet$_{F1}$**, **PNet$_{F5}$**, **PNet$_{F10}$**, **PNet$_{F20}$**  |
 | **Training Goal**             | Generate high-quality pseudo labels $\mathcal{W}_n$ | Improve detection accuracy with various $M$ and $N$ ratios |
 
-### 1. **Download the Training and Test Sets**
+### 1. Download the Training and Test Sets
 
 We have made the training and test sets available for download via the following links:
 
 - [Google Drive](https://drive.google.com/drive/folders/1nHD-d3FanT6-ORsZTEeGgGzQ2CUKyWSe?usp=drive_link)
 - [BaiDu Drive](https://pan.baidu.com/s/1xAe4s6vqONcmwQIAzKOMCQ) (Passwd: ECCV)
 
-Once downloaded, place data.zip in the code/data directory and unzip it.
+Once downloaded, place `data.zip` in the `code/data` directory and unzip it.
 
-### 2. **Train ANet**
+### 2. Train ANet
 
-```python
-    python code/TrainANet/TrainDDP.py --gpu_id 0 --ration 1 
-    # ration represents the proportion of pixel-level labels
+```bash
+python code/TrainANet/TrainDDP.py --gpu_id 0 --ration 1 
+# ration represents the proportion of pixel-level labels
 ```
 
-### 3. **Generate Pseudo Label**
+### 3. Generate Pseudo Labels
 
-```python
-    python code/TrainANet/Test.py --ration 1 
-    # ration represents the proportion of pixel-level labels
+```bash
+python code/TrainANet/Test.py --ration 1 
+# ration represents the proportion of pixel-level labels
 ```
 
-### 4. **Train PNet**
+### 4. Train PNet
 
-```python
-    python code/TrainANet/TrainDDP.py --gpu_id 0 --ration 1 --q_epoch 20 --batchsize_fully 6 --batchsize_weakly 24 
-    # ration represents the proportion of pixel-level labels
-    # q_epoch means we change the q to 1 at this epoch 
-    # batchsize_fully means the number of fully dataset in a batch
-    # batchsize_weaklythe number of weakly dataset in a batch
+```bash
+python code/TrainANet/TrainDDP.py --gpu_id 0 --ration 1 --q_epoch 20 --batchsize_fully 6 --batchsize_weakly 24 
+# ration represents the proportion of pixel-level labels
+# q_epoch means we change the q to 1 at this epoch 
+# batchsize_fully means the number of fully annotated samples in a batch
+# batchsize_weakly means the number of weakly annotated samples in a batch
 ```
 
-当然，这是使用你提供的作者信息替换后的完整内容：
+### 5. Testing Process
 
-```markdown
-## **Testing Process**
-
-```python
+```bash
 python code/TrainPNet/Test.py --ration 1 
 # ration represents the proportion of pixel-level labels
 ```
 
-## **Pretrained Weight and COD Results**
+## Pretrained Weights and COD Results
 
-| **Model**       | **Pretrained Weight**                 | **Prediction Description**                                             |
-|-----------------|---------------------------------------|------------------------------------------------------------------------|
-| **PNet$_{F1}$** | [Download Link](https://example.com)  | $M=1\%$, $N=99\%|
-| **PNet$_{F5}$** | [Download Link](https://example.com)  | $M=5\%$, $N=95\%|
-| **PNet$_{F10}$**| [Download Link](https://example.com)  | $M=10\%$, $N=90\%|
-| **PNet$_{F20}$**| [Download Link](https://example.com)  | $M=20\%, $N=80\%|
+| **Model**       | **Pretrained Weight**                                                                       | **Prediction Description**       |
+|-----------------|---------------------------------------------------------------------------------------------|----------------------------------|
+| **PNet$_{F1}$** | [Download Link](https://pan.baidu.com/s/1Pr2e05XBfCxZWez3EeXHgw?pwd=ECCV)                     | $M=1\%$, $N=99\%$                 |
+| **PNet$_{F5}$** | [Download Link](https://pan.baidu.com/s/1Pr2e05XBfCxZWez3EeXHgw?pwd=ECCV)                     | $M=5\%$, $N=95\%$                 |
+| **PNet$_{F10}$**| [Download Link](https://pan.baidu.com/s/1Pr2e05XBfCxZWez3EeXHgw?pwd=ECCV)                     | $M=10\%$, $N=90\%$                |
+| **PNet$_{F20}$**| [Download Link](https://pan.baidu.com/s/1Pr2e05XBfCxZWez3EeXHgw?pwd=ECCV)                     | $M=20\%$, $N=80\%$                |
 
-## **References**
+## References
 
 ```bibtex
 @inproceedings{OVCOS_ECCV2024,
-  title={Open-Vocabulary Camouflaged Object Segmentation},
+  title={Learning Camouflaged Object Detection from Noisy Pseudo Label},
   author={Jin Zhang and Ruiheng Zhang and Yanjiao Shi and Zhe Cao and Nian Liu and Fahad Shahbaz Khan},
   booktitle={ECCV},
   year={2024},
 }
 ```
-
