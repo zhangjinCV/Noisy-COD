@@ -102,10 +102,10 @@ python code/TrainPNet/Test.py --ration 1
 
 | **Model**       | **Pretrained Weight**                                                                       | **Prediction Description**       |
 |-----------------|---------------------------------------------------------------------------------------------|----------------------------------|
-| **PNet$_{F1}$** | [BaiDu Link](https://pan.baidu.com/s/1caIoaBSCQnfgzrKCJn7wmQ?pwd=ECCV)                     | $M=1\%$, $N=99\%$                 |
-| **PNet$_{F5}$** | [BaiDu Link](https://pan.baidu.com/s/1p0TzsUj8ZbGrtzhEFRM2oQ?pwd=ECCV)                     | $M=5\%$, $N=95\%$                 |
-| **PNet$_{F10}$**| [BaiDu Link](https://pan.baidu.com/s/16no0SM4BvIhl88SRwUp-5Q?pwd=ECCV)                     | $M=10\%$, $N=90\%$                |
-| **PNet$_{F20}$**| [BaiDu Link](https://pan.baidu.com/s/1CshkBMjQGi4r0NdXFIPCeQ?pwd=ECCV)                     | $M=20\%$, $N=80\%$                |
+| **PNet$_{F1}$** | [BaiDu Link](https://pan.baidu.com/s/1caIoaBSCQnfgzrKCJn7wmQ?pwd=ECCV), [Google Link](https://drive.google.com/file/d/12Hmz7cwsxB-ssN9ZYmRucmV3xYSiNb1h/view?usp=drive_link)                    | $M=1\%$, $N=99\%$                 |
+| **PNet$_{F5}$** | [BaiDu Link](https://pan.baidu.com/s/1p0TzsUj8ZbGrtzhEFRM2oQ?pwd=ECCV), [Google Link](https://drive.google.com/file/d/1aWaypg0dh6PnLs8lfMYKEzc4tmn6PhQa/view?usp=drive_link)                      | $M=5\%$, $N=95\%$                 |
+| **PNet$_{F10}$**| [BaiDu Link](https://pan.baidu.com/s/16no0SM4BvIhl88SRwUp-5Q?pwd=ECCV), [Google Link](https://drive.google.com/file/d/1uikuI2LDJ-K2VvGlnz57HCgJq1IA3CmF/view?usp=drive_link)                      | $M=10\%$, $N=90\%$                |
+| **PNet$_{F20}$**| [BaiDu Link](https://pan.baidu.com/s/1CshkBMjQGi4r0NdXFIPCeQ?pwd=ECCV) , [Google Link](https://drive.google.com/file/d/18f2h8FZSa_KYKMgvGVOKAR15KepY8uCQ/view?usp=drive_link)                     | $M=20\%$, $N=80\%$                |
 
 ## References
 
