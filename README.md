@@ -72,7 +72,10 @@ Once downloaded, place `data.zip` in the `code/data` directory and unzip it.
 ```bash
 python code/TrainANet/TrainDDP.py --gpu_id 0 --ration 1 
 # ration represents the proportion of pixel-level labels
+# we find that one card training is better than four or eight cards
 ```
+
+
 
 ### 3. Generate Pseudo Labels
 
