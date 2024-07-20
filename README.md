@@ -2,7 +2,7 @@
 
 This is the open-source repository for our paper **Learning Camouflaged Object Detection from Noisy Pseudo Label**, accepted at ECCV 2024!
 
-[<font color=Blue>Paper</font>](https://arxiv.org/abs/2407.13157)
+Our Paper Can Be Seen at [<font color=Blue>Paper</font>](https://arxiv.org/abs/2407.13157) 
 
 ## Framework Architecture
 
