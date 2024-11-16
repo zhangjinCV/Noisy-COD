@@ -105,7 +105,11 @@ python code/TrainPNet/Test.py --ration 1
 
 ## Pretrained Weights and COD Results
 
-**We release the weight and prediction maps of $N=99\%$, $N=95\%$, $N=90\%$ and $N=20\%$ for ANet at [Biadu Like](https://pan.baidu.com/s/1kFETJrFHKIY5c6AyfYqD0w?pwd=1234).**
+**For ANet**
+
+**We release the weight and prediction maps of $N=99\%$, $N=95\%$, $N=90\%$ and $N=20\%$  at [Biadu Link](https://pan.baidu.com/s/1kFETJrFHKIY5c6AyfYqD0w?pwd=1234).**
+
+**For PNet**
 
 | **Model**       | **Pretrained Weight**                                                                       | **Prediction Description**       |
 |-----------------|---------------------------------------------------------------------------------------------|----------------------------------|
