@@ -122,10 +122,12 @@ python code/TrainPNet/Test.py --ration 1
 ## References
 
 ```bibtex
-@inproceedings{OVCOS_ECCV2024,
+@inproceedings{zhang2025learning,
   title={Learning Camouflaged Object Detection from Noisy Pseudo Label},
-  author={Jin, Zhang and Ruiheng, Zhang and Yanjiao, Shi and Zhe, Cao and Nian, Liu and Shahbaz Khan, Fahad},
-  booktitle={ECCV},
-  year={2024},
+  author={Zhang, Jin and Zhang, Ruiheng and Shi, Yanjiao and Cao, Zhe and Liu, Nian and Khan, Fahad Shahbaz},
+  booktitle={European Conference on Computer Vision},
+  pages={158--174},
+  year={2025},
+  organization={Springer}
 }
 ```
