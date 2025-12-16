@@ -65,7 +65,7 @@ We introduce a novel training protocol named **Weakly Semi-Supervised Camouflage
 We have made the training and test sets available for download via the following links:
 
 - [Google Drive](https://drive.google.com/drive/folders/1nHD-d3FanT6-ORsZTEeGgGzQ2CUKyWSe?usp=drive_link)
-- [BaiDu Drive](https://pan.baidu.com/s/1xAe4s6vqONcmwQIAzKOMCQ) (Passwd: ECCV)
+- [BaiDu Drive](https://pan.baidu.com/s/1l2pal-nueXwcSod4SxBzfw?pwd=he37) (Passwd: he37)
 
 Once downloaded, place `data.zip` in the `code/data` directory and unzip it.
 
